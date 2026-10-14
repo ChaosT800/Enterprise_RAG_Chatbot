@@ -1,0 +1,19 @@
+[project]
+name = "enterprise-rag-chatbot"
+version = "0.1.0"
+description = "Provider-independent enterprise document RAG chatbot"
+requires-python = ">=3.11"
+dependencies = [
+  "pypdf>=5.0.0",
+  "python-docx>=1.1.0",
+  "streamlit>=1.40.0",
+]
+
+[project.optional-dependencies]
+local-embeddings = ["sentence-transformers>=3.0.0"]
+dev = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
